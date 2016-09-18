@@ -1,0 +1,93 @@
+<aside id="left_aside" class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" ng-controller="menuCtrl">
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu">
+            <!-- Optionally, you can add icons to the links -->
+            <li class="treeview">
+                <a href="#" ng-click="goClassPage();"><i class="fa fa-list-ul"></i>
+                    <span>基础信息管理</span><i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a ui-sref="class"><i class="fa fa-graduation-cap"></i> 班级信息</a></li>
+                    <li><a ui-sref="teacher"><i class="fa fa-user"></i> 教师信息</a></li>
+                    <li><a ui-sref="student"><i class="fa fa-child"></i> 幼儿信息</a></li>
+                    <li><a ui-sref="otherUser"><i class="fa fa-group"></i> 管理人员</a></li>
+                    <li><a ui-sref="questionType"><i class="fa fa-question-circle "></i> 小问号信息</a></li>
+                    <li><a ui-sref="activity"><i class="fa fa-rocket"></i> 活动信息</a></li>
+                    <!--<li><a ui-sref="question"><i class="fa fa-question"></i> 小问号内容</a></li>-->
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#" ng-click="goRecordsPage();">
+                    <i class="fa fa-table"></i> <span>全园幼儿记录</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#" ui-sref="checkRecords"><i class="fa fa-list-ol"></i> 全园记录查看</a></li>
+                    <li><a href="#" ui-sref="summaryRecords"><i class="fa fa-database"></i> 全园记录汇总</a></li>
+                    <li><a href="#" ui-sref="chartRecords"><i class="fa fa-bar-chart-o"></i> 幼儿人数分析报表</a></li>
+                </ul>
+            </li>
+
+            <li class="active">
+                <a ui-sref="chartKindAttendance"><i class="fa fa-bar-chart-o"></i> <span>幼儿出勤分析</span></a></li>
+
+            <li class="treeview">
+                <a href="#" ng-click="goLeavePage();">
+                    <i class="fa fa-file-text-o"></i> <span>幼儿请假记录</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#" ui-sref="leave"><i class="fa fa-list-ol"></i> 幼儿请假记录查看</a></li>
+                    <li><a href="#" ui-sref="leaveSummary"><i class="fa fa-database"></i> 幼儿请假记录汇总</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#" ng-click="goStudentEveningPage();">
+                    <i class="fa fa-calendar"></i> <span>幼儿提前离园</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#" ui-sref="studentEvening"> <i class="fa fa-list-ol"></i> 幼儿提前离园查看</a></li>
+                    <li><a href="#" ui-sref="studentEveningSummary"><i class="fa fa-database"></i> 幼儿提前离园汇总</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#" ng-click="goFavoriteActivityPage();"><i class="fa fa-futbol-o"></i> <span>幼儿喜爱活动</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="#" ui-sref="favoriteActivityCheckRecords"><i class="fa fa-list-ol"></i> 幼儿喜爱活动查看</a></li>
+                    <li><a href="#" ui-sref="favoriteActivitySummaryRecords"><i class="fa fa-database"></i> 幼儿喜爱活动汇总</a></li>
+                    <li><a href="#" ui-sref="chartActivity"><i class="fa fa-bar-chart-o"></i> 幼儿喜爱活动分析报表</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#" ng-click="goStarsPage();"><i class="fa fa-star-o"></i> <span>今日小明星</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="#" ui-sref="stars"> <i class="fa fa-list-ol"></i> 今日小明星查看</a></li>
+                    <li><a href="#" ui-sref="chartStars"><i class="fa fa-bar-chart-o"></i> 今日小明星分析报表</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#" ng-click="goQuestionMarkPage();"><i class="fa fa-question"></i> <span>回答小问号</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a  ui-sref="questionMark"><i class="fa fa-database"></i> 回答小问号汇总</a></li>
+                    <li style="display:none"><a ui-sref="chart_questionMark"><i class="fa fa-bar-chart-o"></i> 回答小问号分析报表</a></li>
+                </ul>
+            </li>
+
+            <li class="active"><a ui-sref="tip"><i class="fa fa-newspaper-o"></i> <span>家长小贴士</span></a></li>
+
+            <li class="treeview">
+                <a href="#" ng-click="goObservePage();"><i class="fa fa-server"></i> <span> 教师观察记录</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a ui-sref="observe"> <i class="fa fa-list-ol"></i> 教师观察记录汇总</a></li>
+                    <li><a ui-sref="echart_observe"><i class="fa fa-bar-chart-o"></i> 教师观察记录分析报表</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /.sidebar-menu -->
+    </section>
+</aside>

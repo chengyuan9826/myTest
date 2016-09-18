@@ -1,0 +1,12 @@
+[ {"id":0,"schoolName":"北京一中","schoolLevel":"省属重点","levelId":1,"img":"images/item1.png","provinceId":1},
+  {"id":1,"schoolName":"北京二中","schoolLevel":"省属重点","levelId":1,"img":"images/list1.png","provinceId":1},
+  {"id":3,"schoolName":"北京三中","schoolLevel":"省属重点","levelId":1,"img":"images/item1.png","provinceId":1},
+  {"id":4,"schoolName":"北京四中","schoolLevel":"省属重点","levelId":1,"img":"images/list1.png","provinceId":1},
+  {"id":5,"schoolName":"北京房山中学","schoolLevel":"区县重点","levelId":1,"img":"images/item1.png","provinceId":1},
+  {"id":6,"schoolName":"北京苏庄中学","schoolLevel":"区县重点","levelId":1,"img":"images/list1.png","provinceId":1},
+  {"id":7,"schoolName":"北京广阳城中学","schoolLevel":"区县中学","levelId":1,"img":"images/item1.png","provinceId":1},
+  {"id":8,"schoolName":"北京长阳中学","schoolLevel":"城镇中学","levelId":1,"img":"images/list1.png","provinceId":1},
+  {"id":9,"schoolName":"北京篱笆房中学","schoolLevel":"城镇中学","levelId":1,"img":"images/item1.png","provinceId":1},
+  {"id":10,"schoolName":"北京陈台中学","schoolLevel":"乡村中学","levelId":1,"img":"images/list1.png","provinceId":1},
+  {"id":11,"schoolName":"北京坨里中学","schoolLevel":"乡镇中学","levelId":1,"img":"images/item1.png","provinceId":1}
+]

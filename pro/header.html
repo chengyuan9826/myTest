@@ -1,0 +1,52 @@
+<header class="main-header ng-scope" id="header">
+    <a href="index.html#/default" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><img src="./imgs/logo.png"></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg ng-binding" style="font-size:14px;font-weight: bold;color:#FBFEF8;">北京市智慧树幼儿园</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="javascript:void(0);" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">xybb</span>
+        </a>
+        <!-- <div class="navbar-custom-menu" style="float:left;width:80%; ">
+            <ul class="nav navbar-nav" style="width:100%;" >
+                <li style="font-size:26px;width:100%; margin-top:10px;color:white; text-align:center;">管理服务云平台</li>
+            </ul>
+        </div> -->
+        <div class="navbar-custom-menu">
+            <div class="nav-title" style="color:#F37B46;font-size:24px;font-family:'微软雅黑';font-weight:bold;">
+                管理服务云平台
+            </div>
+            <ul class="nav navbar-nav">
+                <!-- User Account Menu -->
+                <li class="dropdown tasks-menu user user-menu">
+                    <!-- Menu Toggle Button -->
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <!-- The user image in the navbar-->
+                        <img src="/app/plugins/adminLTE/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                        <span class="hidden-xs ng-binding">温老师，欢迎您！</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <ul class="menu">
+                                <li>
+                                    <a href="javascript:void(0);" ng-click="editUI(user)"><i class="fa fa-user"></i>
+                                        修改用户信息</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" ng-click="logout()"><i class="fa fa-times-circle"></i>
+                                        退出系统</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

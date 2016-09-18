@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学校</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/app/plugins/jquery.min.js"></script>
+    <script src="js/app/plugins/angular/angular.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="main">
+<div class="nav-box" >
+    <ul class="nav">
+        <li>
+            <span class="nav-name" >学部</span>
+            <ul class="nav-list clearfix">
+                <li ng-repeat="item in gradeName"><a href=''>{{item.name}}</a></li>
+            </ul>
+        </li>
+        <li>
+            <span class="nav-name" ng-click="downList(this)">地区</span>
+            <ul class="nav-list clearfix">
+                <li ng-repeat="add in province"><a href='' data-provinceId={{add.id}}>{{add.name}}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="shadow"></div>
+</div>
+<div class="main">
+    <ul class="school-list">
+        <li ng-repeat="schoolItem in schoolDetail">
+            <a href="list.html?schoolId={{schoolItem.id}}&priovinceId={{schoolItem.provinceId}}&levelId={{schoolItem.levelId}}">
+                <div class="school-name-txt">
+                    <h5 class="school-name-tit">{{schoolItem.name}}</h5>
+                    <h6 class="school-name-sub">{{schoolItem.schoolLevel}}</h6>
+                </div>
+                <div class="school-pic"><img src={{schoolItem.img}} alt=""></div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script src="js/app/modules/main.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script src="js/iscroll.js"></script>
+</body>
+</html>

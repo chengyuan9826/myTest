@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="x5-orientation" content="portrait">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <title>广雅中学</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/index.min.css"/>
+</head>
+<body ng-app="paper">
+<!--发送至邮箱 start-->
+<div class="wrap-shadow">
+    <div class="btn-list">
+        <a class="download" href="sendToEmail.html">发送至邮箱</a>
+        <button class="cancel">取消</button>
+    </div>
+</div>
+<!--发送至邮箱 end-->
+
+<!--列表 start-->
+<div class="page" ng-controller="list">
+    <div class="static-box">
+        <header>
+            <h3 class="school-name">广雅中学</h3>
+            <ul class="school-name-list">
+                <li ng-repeat="schoolItem in schoolDetail"><a href="">{{schoolItem.schoolName}}</a></li>
+            </ul>
+        </header>
+        <div class="select-type clearfix">
+            <div class="select-box">
+                <span class="show-selected">年级</span>
+                <ul class="show-list clearfix">
+                    <li ng-repeat="gradeItem in grade"><a href="">{{gradeItem.name}}</a></li>
+                </ul>
+            </div>
+            <div class="select-box">
+                <span class="show-selected">学科</span>
+                <ul class="show-list clearfix">
+                    <li><a href="#">全部</a></li>
+                    <li ng-repeat="subjectItem in subject"><a href="#">{{subjectItem.name}}</a></li>
+                </ul>
+            </div>
+            <div class="select-box">
+                <span class="show-selected">资料类型</span>
+                <ul class="show-list clearfix">
+                    <li><a href="">全部</a></li>
+                    <li><a href="">试题试卷</a></li>
+                    <li><a href="">课件</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+    <div class="page-list">
+        <ul class="main-list">
+            <li ng-repeat="examItem in exam" class="list-item clearfix">
+                <a href="detail.html?examId={{examItem.id}}" class="list-item-con">
+                    <div class="item-pic"><img src="{{examItem.img}}" alt=""></div>
+                    <div class="item-txt">
+                        <h5 class="item-txt-title">{{examItem.examName}}</h5>
+                        <div class="item-txt-des"><span class="type">{{examItem.edition}}</span><span class="size">{{examItem.size}}</span>
+                            <span class="num">下载次数：{{examItem.download}}</span></div>
+                    </div>
+                </a>
+                <a class="item-icon" href="">
+                    ...
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!--列表 end-->
+<script src="js/app/plugins/angular/angular.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/app/modules/list.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

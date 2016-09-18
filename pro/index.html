@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="adminApp">
+<head>
+    <script type="text/javascript">
+        var ssDomain = "http://36.110.49.106:58080/";
+        // var ssDomain="http://localhost:8080/";
+        var pageSize = 10;  //分页大小
+        var curDate = new Date();
+        function genMonth(month) {
+            if (month < 10) {
+                month = "0" + month;
+            }
+            return month;
+        }
+        function genDay(day) {
+            if (day < 10) {
+                day = "0" + day;
+            }
+            return day;
+        }
+        //得到某个月的天数
+        function DayNumOfMonth(Year, Month) {
+            var d = new Date(Year, Month, 0);
+            return d.getDate();
+        }
+    </script>
+    <style type="text/css">
+        .redStar{ position:absolute; top:6px; left:-8px; color:red; font-size:18px; font-weight:bold; }
+    </style>
+    <ng-include src="'/header.html'"></ng-include>
+    <script src="app/plugins/angular/angular.min.js"></script>
+    <script src="app/plugins/angular/angular-cookies.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular-ui-router/1.0.0-alpha0/angular-ui-router.js"></script>
+    <script src="http://cdn.bootcss.com/angular-ui-bootstrap/1.2.1/ui-bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular-ui-bootstrap/1.2.1/ui-bootstrap-tpls.js"></script>
+    <script src="app/plugins/upload/ng-file-upload.js"></script>
+    <script src="app/plugins/upload/ng-file-upload-shim.js"></script>
+    <script src="app/modules/class/class.js"></script>
+    <script src="app/modules/tip/tip.js"></script>
+    <script src="app/modules/leave/leave.js"></script>
+    <script src="app/modules/questionMark/questionMark.js"></script>
+    <script src="app/modules/studentEvening/studentEvening.js"></script>
+    <script src="app/modules/user/user.js"></script>
+    <script src="app/modules/teacher/teacher.js"></script>
+    <script src="app/modules/student/student.js"></script>
+    <script src="app/modules/default/default.js"></script>
+    <script src="app/modules/questionMark/questionmark_manage.js"></script>
+    <script src="app/modules/questionMark/questionmark_type_manage.js"></script>
+    <script src="app/modules/otherUser/otherUser.js"></script>
+    <script src="app/modules/activity/activity.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/modules/records/records.js"></script>
+    <script src="app/modules/kindAttendance/kindAttendance.js"></script>
+    <script src="app/modules/favoriteActivity/favoriteActivity.js"></script>
+    <script src="app/modules/stars/stars.js"></script>
+    <script src="app/modules/observe/observe.js"></script>
+</head>
+<body class="hold-transition sidebar-mini" ng-controller="MainCtrl">
+    <ng-include src="'header.html'"></ng-include>
+    <div class="content-wrapper" style="min-height: 848px;" ui-view></div>
+    <ng-include src="aside.html" onload="finishLoading()"></ng-include>
+    <div class="control-sidebar-bg"></div>
+    <script src="app/plugins/jQuery/jquery.min.js"></script>
+    <script src="app/plugins/jQuery/jquery.min.js"></script>
+    <script src="app/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="app/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="app/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="app/plugins/pagination/dirPagination.js"></script>
+    <script src="app/plugins/datePlugin/selectMonth.js"></script>
+    <script src="app/plugins/select/icheck.js?v=1.0.2"></script>
+    <script src="app/plugins/select/layer.js"></script>
+    <script src="app/plugins/echart/echarts.js"></script>
+  <!--  <form name="userForm" ng-submit="doSubmit()">
+        <div class="box-body">
+            <input name="id" type="hidden" value="' + user.id + '"/>
+            <div class="form-group">
+                <input name="name" type="text" value="' + user.name + '" class="form-control" placeholder="请输入姓名..." required/>
+            </div>
+            <div class="form-group">
+                <input name="phone" type="text" value="' + user.phone + '" class="form-control" placeholder="请输入手机号..."/>
+            </div>
+            <div class="form-group">
+                <input name="pwd" type="password" class="form-control" placeholder="输入新密码..."  required/>
+            </div>
+            <div class="form-group">
+                <input name="repwd" type="password" class="form-control" placeholder="输入确认密码..."/>
+            </div>
+        </div>
+    </form>-->
+</body>
+</html>

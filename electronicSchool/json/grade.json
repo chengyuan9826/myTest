@@ -1,0 +1,13 @@
+[ {"id":0,"name":"高一","levelId":"3"},
+  {"id":1,"name":"高二","levelId":"3"},
+  {"id":2,"name":"高三","levelId":"3"},
+  {"id":3,"name":"七年级","levelId":"2"},
+  {"id":4,"name":"八年级","levelId":"2"},
+  {"id":5,"name":"九年级","levelId":"2"},
+  {"id":6,"name":"一年级","levelId":"1"},
+  {"id":7,"name":"二年级","levelId":"1"},
+  {"id":8,"name":"三年级","levelId":"1"},
+  {"id":9,"name":"四年级","levelId":"1"},
+  {"id":10,"name":"五年级","levelId":"1"},
+  {"id":11,"name":"六年级","levelId":"1"}
+]
